@@ -3,8 +3,6 @@ import styles from './Post.module.css'
 
 const Post = (props) => {
 
-    debugger;
-
     return (
 
         <div className = {styles.posts__item}>

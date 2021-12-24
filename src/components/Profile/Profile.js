@@ -4,7 +4,7 @@ import MyPosts from './MyPosts/MyPosts';
 
 const Profile = () => {
     return (
-        <main className = {styles.content}>
+        <main>
             <div>
                 <img src = 'https://www.industrialempathy.com/img/remote/ZiClJf-1920w.jpg'
                      alt = '' />
