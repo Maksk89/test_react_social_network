@@ -1,10 +1,11 @@
 import './App.css';
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Profile from './components/Profile/Profile';
 import Dialogs from './components/Dialogs/Dialogs';
 import Layout from './components/Layout/Layout';
-import Header from './components/Header/Header';
-import NavBar from './components/Navbar/NavBar';
+import News from './components/News/News';
+import Music from './components/Music/Music';
+import Settings from './components/Settings/Settings';
 
 const App = () => {
     return (
@@ -14,8 +15,9 @@ const App = () => {
                     <Route index element = {<Profile />} />
                     <Route path = "dialogs" element = {<Dialogs />} />
                     <Route path = "profile" element = {<Profile />} />
-
-
+                    <Route path = "news" element = {<News />} />
+                    <Route path = "music" element = {<Music />} />
+                    <Route path = "settings" element = {<Settings />} />
                 </Route>
             </Routes>
         </div>
