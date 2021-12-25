@@ -6,7 +6,7 @@ import './Layout.css';
 
 const Layout = () => {
     return (
-        <div>
+        <div className = 'app-wrapper'>
             <Header />
             <NavBar />
             <div className = 'app-wrapper__content'>

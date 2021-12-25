@@ -8,23 +8,18 @@ import NavBar from './components/Navbar/NavBar';
 
 const App = () => {
     return (
-        <div className = 'App'>
-            <Header />
-            <NavBar />
-            <div className = 'app-wrapper__content'>
-                <Routes>
-                    {/*<Route path = "/" element = {<Layout />}>*/}
+        <div>
+            <Routes>
+                <Route path = "/" element = {<Layout />}>
                     <Route index element = {<Profile />} />
                     <Route path = "dialogs" element = {<Dialogs />} />
                     <Route path = "profile" element = {<Profile />} />
 
 
-                    {/*</Route>*/}
-                </Routes>
-            </div>
+                </Route>
+            </Routes>
         </div>
-    )
-        ;
+    );
 }
 
 
