@@ -16,3 +16,7 @@ li {
 	color: #00ddff;
 }
 
+.nav__item a.active {
+	color: rebeccapurple;
+}
+
