@@ -18,10 +18,10 @@ const DialogItem = ({name, id}) => {
 
 // import React from 'react';
 
-const Message = ({message}) => {
+const Message = ({text}) => {
     return (
         <div className = {styles.message__item}>
-            {message}
+            {text}
         </div>
     );
 };
@@ -40,23 +40,29 @@ const Dialogs = ({props}) => {
     ]
 
     const messagesData = [
-        {id: 1, message: 'Hello'},
-        {id: 2, message: 'How are you?'},
-        {id: 3, message: 'What is the weather today?'},
-        {id: 4, message: 'What are your hobbies?'},
-        {id: 5, message: 'What music do you prefer?'}
+        {id: 1, text: 'Hello'},
+        {id: 2, text: 'How are you?'},
+        {id: 3, text: 'What is the weather today?'},
+        {id: 4, text: 'What are your hobbies?'},
+        {id: 5, text: 'What music do you prefer?'}
     ]
+
+    const dialogsElements = dialogsData
+        .map (dialog =>
+            <DialogItem name = {dialog.name} id = {dialog.id} />
+        );
+
+    const messagesElements = messagesData
+        .map ((message) => <Message text = {message.text} />)
+
 
     return (
         <div className = {styles.dialogsList}>
             <div className = {styles.dialogsList__item}>
-                <DialogItem name = {dialogsData[0].name} id = {dialogsData[0].id} />
-                <DialogItem name = {dialogsData[1].name} id = {dialogsData[1].id} />
+                {dialogsElements}
             </div>
             <div className = {styles.dialog__messages}>
-                <Message message = {messagesData[0].message} />
-                <Message message = {messagesData[1].message} />
-                <Message message = {messagesData[2].message} />
+                {messagesElements}
             </div>
         </div>
     );
