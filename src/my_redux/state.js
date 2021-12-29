@@ -1,9 +1,9 @@
 const state = {
     profilePage: {
         postsData: [
-            {id: 1, message: 'Hi', likesCount: 10},
-            {id: 2, message: 'How are you?', likesCount: 15},
-            {id: 2, message: 'This is a post', likesCount: 5},
+            {id: 1, content: 'Hi', likesCount: 10},
+            {id: 2, content: 'How are you?', likesCount: 15},
+            {id: 3, content: 'This is a post', likesCount: 5},
         ]
     },
     dialogsPage: {
@@ -22,7 +22,17 @@ const state = {
             {id: 5, text: 'What music do you prefer?'}
         ],
     }
-
-
 }
+
+const addPost = (postContent) => {
+    debugger;
+    const newPost = {
+        id: 4,
+        content: postContent,
+        likesCount: 0,
+    };
+    state.profilePage.postsData.push (newPost);
+}
+
 export default state
+export { addPost }
