@@ -12,7 +12,7 @@ const App = (props) => {
         <div>
             <Routes>
                 <Route path = "/" element = {<Layout />}>
-                    <Route index element = {<Profile />} />
+                    <Route index element = {<Profile state = {props.appState.profilePage} />} />
                     <Route path = "dialogs"
                            element = {<Dialogs
                                state = {props.appState.dialogsPage} />} />
