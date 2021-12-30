@@ -1,5 +1,6 @@
 import './App.css';
 import { Routes, Route } from "react-router-dom";
+import React from 'react';
 import Profile from './components/Profile/Profile';
 import Dialogs from './components/Dialogs/Dialogs';
 import Layout from './components/Layout/Layout';
@@ -12,13 +13,16 @@ const App = (props) => {
         <div>
             <Routes>
                 <Route path = "/" element = {<Layout />}>
+                    {/* eslint-disable-next-line react/prop-types */}
                     <Route index element = {<Profile state = {props.appState.profilePage} />} />
                     <Route path = "dialogs"
                            element = {<Dialogs
                                state = {props.appState.dialogsPage} />} />
                     <Route path = "profile"
                            element = {<Profile
-                               state = {props.appState.profilePage} addPost = {props.addPost} />} />
+                               state = {props.appState.profilePage}
+                               addPost = {props.addPost}
+                               updateNewPostText = {props.updateNewPostText} />} />
                     <Route path = "news" element = {<News />} />
                     <Route path = "music" element = {<Music />} />
                     <Route path = "settings" element = {<Settings />} />
