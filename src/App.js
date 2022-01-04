@@ -14,13 +14,15 @@ const App = (props) => {
             <Routes>
                 <Route path = "/" element = {<Layout />}>
                     {/* eslint-disable-next-line react/prop-types */}
-                    <Route index element = {<Profile state = {props.appState.profilePage} />} />
+                    <Route index element = {<Profile state = {props.state.profilePage}
+                                                     addPost = {props.addPost}
+                                                     updateNewPostText = {props.updateNewPostText} />} />
                     <Route path = "dialogs"
                            element = {<Dialogs
-                               state = {props.appState.dialogsPage} />} />
+                               state = {props.state.dialogsPage} />} />
                     <Route path = "profile"
                            element = {<Profile
-                               state = {props.appState.profilePage}
+                               state = {props.state.profilePage}
                                addPost = {props.addPost}
                                updateNewPostText = {props.updateNewPostText} />} />
                     <Route path = "news" element = {<News />} />
