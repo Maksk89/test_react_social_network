@@ -1,7 +1,7 @@
 import React from 'react';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import store from './my_redux/state';
+import store from './my_redux/store';
 import App from './App';
 import { BrowserRouter as Router } from 'react-router-dom';
 import * as ReactDOM from 'react-dom';
@@ -15,7 +15,7 @@ const rerenderEntireTree = (state) => {
         </React.StrictMode>,
         document.getElementById ('root')
     );
-}
+};
 
 rerenderEntireTree (store.getState ());
 store.subscribe (rerenderEntireTree);
