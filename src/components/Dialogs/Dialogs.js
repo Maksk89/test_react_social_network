@@ -8,11 +8,11 @@ const Dialogs = (props) => {
 
     const dialogsElements = state.dialogsData
         .map (dialog =>
-            <DialogItem name = {dialog.name} id = {dialog.id} />
+            <DialogItem name = {dialog.name} id = {dialog.id} key = {dialog.id} />
         );
 
     const messagesElements = state.messagesData
-        .map ((message) => <Message text = {message.text} />);
+        .map ((message) => <Message text = {message.text} key = {message.id} />);
     const newMessageBody = state.newMessageBody;
 
     const sendMessageHandler = () => {
