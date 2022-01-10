@@ -2,7 +2,6 @@ import './App.css';
 import { Routes, Route } from "react-router-dom";
 import React from 'react';
 import Profile from './components/Profile/Profile';
-import Dialogs from './components/Dialogs/Dialogs';
 import Layout from './components/Layout/Layout';
 import News from './components/News/News';
 import Music from './components/Music/Music';

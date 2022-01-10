@@ -7,7 +7,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import * as ReactDOM from 'react-dom';
 import { Provider } from './my_redux/StoreContext';
 
-const rerenderEntireTree = (state) => {
+const rerenderEntireTree = () => {
     ReactDOM.render (
         <React.StrictMode>
             <Router>
@@ -20,10 +20,9 @@ const rerenderEntireTree = (state) => {
     );
 };
 
-rerenderEntireTree (store.getState ());
+rerenderEntireTree ();
 store.subscribe (() => {
-    const state = store.getState ();
-    rerenderEntireTree (state);
+    rerenderEntireTree ();
 });
 
 // If you want to start measuring performance in your app, pass a function
