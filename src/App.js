@@ -14,7 +14,6 @@ const App = () => {
         <div>
             <Routes>
                 <Route path = '/' element = {<Layout />}>
-                    {/* eslint-disable-next-line react/prop-types */}
                     <Route index element = {<Profile />} />
                     <Route path = 'dialogs'
                            element = {<DialogsContainer />} />
