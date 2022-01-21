@@ -4,7 +4,7 @@ import preloader from '../../../assets/images/loader.gif';
 function Preloader (props) {
     return (
         <div style = {{backgroundColor: 'white'}}>
-            <img src = {preloader} />
+            <img src = {preloader} alt = 'preloader' />
         </div>
     );
 }

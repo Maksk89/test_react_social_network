@@ -41,10 +41,15 @@ const dialogsReducer = (state = initialState, action) => {
     }
 };
 
-const sendMessageActionCreator = () => ({type: SEND_MESSAGE});
-const updateNewMessageBodyActionCreator = (body) => ({
+// action creators
+
+export const sendMessage = () => ({type: SEND_MESSAGE});
+export const updateNewMessageBody = (body) => ({
     type: UPDATE_NEW_MESSAGE_BODY, body: body
 });
 
 
-export { dialogsReducer, sendMessageActionCreator, updateNewMessageBodyActionCreator };
+export { dialogsReducer };
+
+export class updateNewMessageBodyActionCreator {
+}
