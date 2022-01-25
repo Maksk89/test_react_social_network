@@ -12,7 +12,6 @@ const ProfileContainerFunctional = (props) => {
         userId = 2;
     }
     useEffect (() => {
-        console.log (userId);
         axios.get ('https://social-network.samuraijs.com/api/1.0/profile/' + userId)
             .then (response => {
                 props.setUserProfile (response.data);
